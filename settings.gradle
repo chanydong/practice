@@ -16,3 +16,4 @@ rootProject.name = "practice"
 include ':app'
 include ':slot'
 include ':modifier'
+include ':rowcoldemo'
