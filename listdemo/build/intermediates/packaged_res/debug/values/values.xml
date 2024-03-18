@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="car_array">
+        <item>Buick Century</item>
+        <item>Buick LaSabre</item>
+        <item>Buick Roadmaster</item>
+        <item>Buick Special Riviera</item>
+        <item>Cadillac Couple De Ville</item>
+        <item>Cadillac Eldorado</item>
+        <item>Cadillac Fleetwood</item>
+        <item>Cadillac Series 62</item>
+        <item>Cadillac Seville</item>
+        <item>Ford Fairlane</item>
+        <item>Ford Galaxie 500</item>
+        <item>Ford Mustang</item>
+        <item>Ford Thunderbird</item>
+        <item>GMC Le Mans</item>
+        <item>Plymouth Fury</item>
+        <item>Plymouth GTX</item>
+        <item>Plymouth Roadrunner</item>
+    </string-array>
+    <color name="black">#FF000000</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">ListDemo</string>
+    <style name="Theme.Practice" parent="android:Theme.Material.Light.NoActionBar"/>
+</resources>
