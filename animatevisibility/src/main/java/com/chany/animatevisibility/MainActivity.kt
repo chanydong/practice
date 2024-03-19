@@ -87,7 +87,7 @@ fun MainScreen() {
                             CustomButton(text = "hide", targetState = false, onClick = onClick)
                         }
                         false -> {
-                            CustomButton(text = "show", targetState = true, onClick = onClick )
+                            CustomButton(text = "show", targetState = true, onClick = onClick)
                         }
                     }
 
