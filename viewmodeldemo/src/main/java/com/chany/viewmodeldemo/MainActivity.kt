@@ -107,6 +107,7 @@ fun ScreenSetup(viewModel: DemoViewModel = DemoViewModel()) {
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun DefaultPreview(model: DemoViewModel = DemoViewModel()) {
+
     PracticeTheme {
         MainScreen(isFahrenheit = model.isFahrenheit, result = model.result,
             convertTemp = { model.convertTemp(it) },
