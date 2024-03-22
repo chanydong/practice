@@ -21,3 +21,8 @@ include ':boxlayout'
 include ':layoutmodifier'
 include ':canvasdemo'
 include ':viewmodeldemo'
+<<<<<<< Updated upstream
+=======
+include ':roomdemo'
+include ':navigationdemo'
+>>>>>>> Stashed changes
