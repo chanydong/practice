@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="jbr-17" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/bottombardemo" />
             <option value="$PROJECT_DIR$/boxlayout" />
             <option value="$PROJECT_DIR$/canvasdemo" />
             <option value="$PROJECT_DIR$/layoutmodifier" />
             <option value="$PROJECT_DIR$/modifier" />
-<<<<<<< Updated upstream
-=======
             <option value="$PROJECT_DIR$/navigationdemo" />
             <option value="$PROJECT_DIR$/roomdemo" />
->>>>>>> Stashed changes
             <option value="$PROJECT_DIR$/rowcoldemo" />
             <option value="$PROJECT_DIR$/slot" />
             <option value="$PROJECT_DIR$/viewmodeldemo" />
