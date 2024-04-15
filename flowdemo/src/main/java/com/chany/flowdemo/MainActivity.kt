@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -26,10 +27,15 @@ import com.chany.flowdemo.ui.theme.PracticeTheme
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.buffer
+import kotlinx.coroutines.flow.flatMapConcat
+import kotlinx.coroutines.flow.flatMapMerge
 import kotlinx.coroutines.flow.reduce
 import kotlin.system.measureTimeMillis
 
 class MainActivity : ComponentActivity() {
+
+    private val viewModel: DemoViewModel = DemoViewModel()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -40,6 +46,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
 
+                    ScreenSetup(viewModel)
 
                 }
             }
@@ -49,27 +56,31 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun ScreenSetup(viewModel: DemoViewModel = viewModel()) {
-    MainScreen(viewModel.newFlow)
+    MainScreen(viewModel)
 }
 @Composable
-fun MainScreen(flow: Flow<String>) {
-    var count by remember { mutableStateOf<Int>(0) }
+fun MainScreen(viewModel: DemoViewModel) {
+    val count by viewModel.sharedFlow.collectAsState(initial = 0)
 
-
+    /*
     LaunchedEffect(Unit) {
-
-        flow.reduce {
-            accumulator, value ->
-            count = accumulator.toInt()
-            accumulator + value
-        }
+        viewModel.myFlow
+            .flatMapMerge { viewModel.doubleIt(it) }
+            .collect { count = it
+                            println("count = $it")
+            }
     }
+
+     */
 
     Column(modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = count, style = TextStyle(fontSize = 40.sp))
+        Text(text = "$count", style = TextStyle(fontSize = 40.sp))
+        Button(onClick = { viewModel.startSharedFlow() }) {
+            Text("Click Me")
+        }
     }
 
 }
